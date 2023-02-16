@@ -4,6 +4,12 @@
     <Filter Include="ForLatte">
       <UniqueIdentifier>{C662B685-B22F-1191-DB48-FF38C774461F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ForLatte\Events">
+      <UniqueIdentifier>{EA73D4F6-56FF-41BB-5F10-C5AFCB1A9EBB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ForLatte\Platform">
+      <UniqueIdentifier>{DA1DDF19-4634-DDAF-8FAB-68D1FB00AE37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ForLatte.h" />
@@ -16,9 +22,28 @@
     <ClInclude Include="src\ForLatte\EntryPoint.h">
       <Filter>ForLatte</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\Events\ApplicationEvent.h">
+      <Filter>ForLatte\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Events\Event.h">
+      <Filter>ForLatte\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Events\KeyEvent.h">
+      <Filter>ForLatte\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Events\MouseEvent.h">
+      <Filter>ForLatte\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\ForLatte\Log.h">
       <Filter>ForLatte</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\Platform\WindowsWindow.h">
+      <Filter>ForLatte\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Window.h">
+      <Filter>ForLatte</Filter>
+    </ClInclude>
+    <ClInclude Include="src\flpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ForLatte\Application.cpp">
@@ -27,5 +52,9 @@
     <ClCompile Include="src\ForLatte\Log.cpp">
       <Filter>ForLatte</Filter>
     </ClCompile>
+    <ClCompile Include="src\ForLatte\Platform\WindowsWindow.cpp">
+      <Filter>ForLatte\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\flpch.cpp" />
   </ItemGroup>
 </Project>

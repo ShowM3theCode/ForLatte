@@ -9,6 +9,12 @@ workspace "ForLatte"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include direction relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "ForLatte/vender/GLFW/include"
+
+include "ForLatte/vender/GLFW"
+
 project "ForLatte"
 	location "ForLatte"
 	kind "SharedLib"
@@ -17,13 +23,23 @@ project "ForLatte"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "flpch.h"
+	pchsource "ForLatte/src/flpch.cpp"
+
 	files {
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs {
-		"ForLatte/vender/spdlog/include"
+		"ForLatte/vender/spdlog/include",
+		"ForLatte/src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links {
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
