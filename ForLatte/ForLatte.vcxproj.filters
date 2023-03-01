@@ -7,8 +7,17 @@
     <Filter Include="ForLatte\Events">
       <UniqueIdentifier>{EA73D4F6-56FF-41BB-5F10-C5AFCB1A9EBB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ForLatte\ImGui">
+      <UniqueIdentifier>{70540B3E-5C22-FF43-45B6-6F6A3123DBA8}</UniqueIdentifier>
+    </Filter>
     <Filter Include="ForLatte\Platform">
       <UniqueIdentifier>{DA1DDF19-4634-DDAF-8FAB-68D1FB00AE37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ForLatte\Platform\OpenGL">
+      <UniqueIdentifier>{CE6D88F0-BA92-D770-E3DD-BC00CF61D68E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ForLatte\Platform\Windows">
+      <UniqueIdentifier>{1402B259-80C4-E5E3-C974-74703576BEC1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,11 +43,23 @@
     <ClInclude Include="src\ForLatte\Events\MouseEvent.h">
       <Filter>ForLatte\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\ImGui\ImGuiLayer.h">
+      <Filter>ForLatte\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Layer.h">
+      <Filter>ForLatte</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\LayerStack.h">
+      <Filter>ForLatte</Filter>
+    </ClInclude>
     <ClInclude Include="src\ForLatte\Log.h">
       <Filter>ForLatte</Filter>
     </ClInclude>
-    <ClInclude Include="src\ForLatte\Platform\WindowsWindow.h">
-      <Filter>ForLatte\Platform</Filter>
+    <ClInclude Include="src\ForLatte\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Platform\Windows\WindowsWindow.h">
+      <Filter>ForLatte\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Window.h">
       <Filter>ForLatte</Filter>
@@ -49,11 +70,23 @@
     <ClCompile Include="src\ForLatte\Application.cpp">
       <Filter>ForLatte</Filter>
     </ClCompile>
+    <ClCompile Include="src\ForLatte\ImGui\ImGuiLayer.cpp">
+      <Filter>ForLatte\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Layer.cpp">
+      <Filter>ForLatte</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\LayerStack.cpp">
+      <Filter>ForLatte</Filter>
+    </ClCompile>
     <ClCompile Include="src\ForLatte\Log.cpp">
       <Filter>ForLatte</Filter>
     </ClCompile>
-    <ClCompile Include="src\ForLatte\Platform\WindowsWindow.cpp">
-      <Filter>ForLatte\Platform</Filter>
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Platform\Windows\WindowsWindow.cpp">
+      <Filter>ForLatte\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\flpch.cpp" />
   </ItemGroup>

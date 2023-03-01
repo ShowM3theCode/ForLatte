@@ -79,11 +79,12 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>flpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>FL_PLATFORM_WINDOWS;FL_BUILD_DLL;FL_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vender\spdlog\include;src;vender\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FL_PLATFORM_WINDOWS;FL_BUILD_DLL;GLFW_INCLUDE_NONE;FL_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>vender\spdlog\include;src;vender\GLFW\include;vender\Glad\include;vender\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -102,11 +103,12 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>flpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>FL_PLATFORM_WINDOWS;FL_BUILD_DLL;FL_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vender\spdlog\include;src;vender\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FL_PLATFORM_WINDOWS;FL_BUILD_DLL;GLFW_INCLUDE_NONE;FL_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>vender\spdlog\include;src;vender\GLFW\include;vender\Glad\include;vender\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -125,11 +127,12 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>flpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>FL_PLATFORM_WINDOWS;FL_BUILD_DLL;FL_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vender\spdlog\include;src;vender\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FL_PLATFORM_WINDOWS;FL_BUILD_DLL;GLFW_INCLUDE_NONE;FL_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>vender\spdlog\include;src;vender\GLFW\include;vender\Glad\include;vender\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -152,15 +155,23 @@
     <ClInclude Include="src\ForLatte\Events\Event.h" />
     <ClInclude Include="src\ForLatte\Events\KeyEvent.h" />
     <ClInclude Include="src\ForLatte\Events\MouseEvent.h" />
+    <ClInclude Include="src\ForLatte\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\ForLatte\Layer.h" />
+    <ClInclude Include="src\ForLatte\LayerStack.h" />
     <ClInclude Include="src\ForLatte\Log.h" />
-    <ClInclude Include="src\ForLatte\Platform\WindowsWindow.h" />
+    <ClInclude Include="src\ForLatte\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\ForLatte\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\ForLatte\Window.h" />
     <ClInclude Include="src\flpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ForLatte\Application.cpp" />
+    <ClCompile Include="src\ForLatte\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\ForLatte\Layer.cpp" />
+    <ClCompile Include="src\ForLatte\LayerStack.cpp" />
     <ClCompile Include="src\ForLatte\Log.cpp" />
-    <ClCompile Include="src\ForLatte\Platform\WindowsWindow.cpp" />
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\ForLatte\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\flpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -168,6 +179,12 @@
   <ItemGroup>
     <ProjectReference Include="vender\GLFW\GLFW.vcxproj">
       <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vender\Glad\Glad.vcxproj">
+      <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vender\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -12,8 +12,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include direction relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "ForLatte/vender/GLFW/include"
+IncludeDir["Glad"] = "ForLatte/vender/Glad/include"
+IncludeDir["ImGui"] = "ForLatte/vender/imgui"
 
 include "ForLatte/vender/GLFW"
+include "ForLatte/vender/Glad"
+include "ForLatte/vender/imgui"
 
 project "ForLatte"
 	location "ForLatte"
@@ -34,11 +38,15 @@ project "ForLatte"
 	includedirs {
 		"ForLatte/vender/spdlog/include",
 		"ForLatte/src",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links {
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -49,7 +57,8 @@ project "ForLatte"
 
 		defines {
 			"FL_PLATFORM_WINDOWS",
-			"FL_BUILD_DLL"
+			"FL_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands {
@@ -58,14 +67,17 @@ project "ForLatte"
 
 	filter "configurations:Debug"
 		defines "FL_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "FL_RELEASE"
+		buildoptions "/MD"
 		symbols "On"
 
 	filter "configurations:Dist"
 		defines "FL_DIST"
+		buildoptions "/MD"
 		symbols "On"
 
 project "Sandbox"
@@ -101,12 +113,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "FL_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "FL_RELEASE"
+		buildoptions "/MD"
 		symbols "On"
 
 	filter "configurations:Dist"
 		defines "FL_DIST"
+		buildoptions "/MD"
 		symbols "On"
