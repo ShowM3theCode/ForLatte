@@ -46,6 +46,9 @@
     <ClInclude Include="src\ForLatte\ImGui\ImGuiLayer.h">
       <Filter>ForLatte\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\Input.h">
+      <Filter>ForLatte</Filter>
+    </ClInclude>
     <ClInclude Include="src\ForLatte\Layer.h">
       <Filter>ForLatte</Filter>
     </ClInclude>
@@ -57,6 +60,9 @@
     </ClInclude>
     <ClInclude Include="src\ForLatte\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Platform\Windows\WindowsInput.h">
+      <Filter>ForLatte\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Platform\Windows\WindowsWindow.h">
       <Filter>ForLatte\Platform\Windows</Filter>
@@ -84,6 +90,9 @@
     </ClCompile>
     <ClCompile Include="src\ForLatte\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Platform\Windows\WindowsInput.cpp">
+      <Filter>ForLatte\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\Platform\Windows\WindowsWindow.cpp">
       <Filter>ForLatte\Platform\Windows</Filter>

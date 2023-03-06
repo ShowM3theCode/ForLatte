@@ -4,6 +4,7 @@
 #include "Log.h"
 
 #include "glad/glad.h"
+#include "Input.h"
 
 namespace ForLatte {
 
@@ -12,7 +13,6 @@ namespace ForLatte {
 	Application* Application::s_Instance = nullptr;
 
 	Application::Application() {
-		FL_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 
 		m_Window = std::unique_ptr<Window>(Window::Create());
@@ -28,6 +28,9 @@ namespace ForLatte {
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
+			auto [x, y] = Input::GetMousePostion();
+			FL_CORE_TRACE("{0} {1}", x, y);
 
 			m_Window->OnUpdate();
 		}
