@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="{prj.name}">
+      <UniqueIdentifier>{F8E06BA5-E498-ADF2-4DA0-864E397748E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="{prj.name}\vender">
+      <UniqueIdentifier>{0BAFA9B5-77C5-A74B-C03C-336D2C9278D3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="{prj.name}\vender\glm">
+      <UniqueIdentifier>{DAC6CBC1-4633-87BC-0F27-1F1A7B52A924}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\SandboxApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

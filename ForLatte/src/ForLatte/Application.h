@@ -6,6 +6,8 @@
 #include "ForLatte/LayerStack.h"
 #include "Events/ApplicationEvent.h"
 
+#include "ImGui/ImGuiLayer.h"
+
 
 namespace ForLatte {
 	class ForLatte_API Application {
@@ -25,6 +27,7 @@ namespace ForLatte {
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 		static Application* s_Instance;

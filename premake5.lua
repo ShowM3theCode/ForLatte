@@ -15,6 +15,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "ForLatte/vender/GLFW/include"
 IncludeDir["Glad"] = "ForLatte/vender/Glad/include"
 IncludeDir["ImGui"] = "ForLatte/vender/imgui"
+IncludeDir["glm"] = "ForLatte/vender/glm"
 
 include "ForLatte/vender/GLFW"
 include "ForLatte/vender/Glad"
@@ -22,8 +23,10 @@ include "ForLatte/vender/imgui"
 
 project "ForLatte"
 	location "ForLatte"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -33,7 +36,9 @@ project "ForLatte"
 
 	files {
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"{prj.name}/vender/glm/glm/**.hpp",
+		"{prj.name}/vender/glm/glm/**.inl"
 	}
 
 	includedirs {
@@ -41,7 +46,8 @@ project "ForLatte"
 		"ForLatte/src",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links {
@@ -52,8 +58,6 @@ project "ForLatte"
 	}
 
 	filter "system:windows"
-		cppdialect "c++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines {
@@ -62,29 +66,27 @@ project "ForLatte"
 			"GLFW_INCLUDE_NONE"
 		}
 
-		postbuildcommands {
-			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
-		}
-
 	filter "configurations:Debug"
 		defines "FL_DEBUG"
-		buildoptions "/MDd"
-		symbols "On"
+		runtime "Debug"
+		symbols "on"
 	
 	filter "configurations:Release"
 		defines "FL_RELEASE"
-		buildoptions "/MD"
-		symbols "On"
+		runtime "Release"
+		symbols "on"
 
 	filter "configurations:Dist"
 		defines "FL_DIST"
-		buildoptions "/MD"
-		symbols "On"
+		runtime "Release"
+		symbols "on"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	cppdialect "c++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -96,7 +98,8 @@ project "Sandbox"
 
 	includedirs {
 		"ForLatte/vender/spdlog/include",
-		"ForLatte/src"
+		"ForLatte/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links {
@@ -104,8 +107,6 @@ project "Sandbox"
 	}
 
 	filter "system:windows"
-		cppdialect "c++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines {
@@ -114,15 +115,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "FL_DEBUG"
-		buildoptions "/MDd"
-		symbols "On"
+		runtime "Debug"
+		symbols "on"
 	
 	filter "configurations:Release"
 		defines "FL_RELEASE"
-		buildoptions "/MD"
-		symbols "On"
+		runtime "Release"
+		symbols "on"
 
 	filter "configurations:Dist"
 		defines "FL_DIST"
-		buildoptions "/MD"
-		symbols "On"
+		runtime "Release"
+		symbols "on"
