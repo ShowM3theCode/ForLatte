@@ -150,8 +150,14 @@
     <ClInclude Include="src\ForLatte\LayerStack.h" />
     <ClInclude Include="src\ForLatte\Log.h" />
     <ClInclude Include="src\ForLatte\MouseButtonCodes.h" />
+    <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\ForLatte\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\ForLatte\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\ForLatte\Renderer\Buffer.h" />
+    <ClInclude Include="src\ForLatte\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\ForLatte\Renderer\Renderer.h" />
+    <ClInclude Include="src\ForLatte\Renderer\Shader.h" />
     <ClInclude Include="src\ForLatte\Window.h" />
     <ClInclude Include="src\flpch.h" />
   </ItemGroup>
@@ -162,8 +168,13 @@
     <ClCompile Include="src\ForLatte\Layer.cpp" />
     <ClCompile Include="src\ForLatte\LayerStack.cpp" />
     <ClCompile Include="src\ForLatte\Log.cpp" />
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\ForLatte\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\ForLatte\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\ForLatte\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\ForLatte\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\ForLatte\Renderer\Shader.cpp" />
     <ClCompile Include="src\flpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

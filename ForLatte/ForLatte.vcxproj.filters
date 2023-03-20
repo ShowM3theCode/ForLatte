@@ -13,8 +13,14 @@
     <Filter Include="ForLatte\Platform">
       <UniqueIdentifier>{DA1DDF19-4634-DDAF-8FAB-68D1FB00AE37}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ForLatte\Platform\OpenGL">
+      <UniqueIdentifier>{CE6D88F0-BA92-D770-E3DD-BC00CF61D68E}</UniqueIdentifier>
+    </Filter>
     <Filter Include="ForLatte\Platform\Windows">
       <UniqueIdentifier>{1402B259-80C4-E5E3-C974-74703576BEC1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ForLatte\Renderer">
+      <UniqueIdentifier>{2C25BCF4-983B-BA8A-E1B2-45AC4D088B12}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -61,16 +67,34 @@
     <ClInclude Include="src\ForLatte\MouseButtonCodes.h">
       <Filter>ForLatte</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLBuffer.h">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLContext.h">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\ForLatte\Platform\Windows\WindowsInput.h">
       <Filter>ForLatte\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Platform\Windows\WindowsWindow.h">
       <Filter>ForLatte\Platform\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\Renderer\Buffer.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Renderer\GraphicsContext.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Renderer\Shader.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\ForLatte\Window.h">
       <Filter>ForLatte</Filter>
     </ClInclude>
     <ClInclude Include="src\flpch.h" />
+    <ClInclude Include="src\ForLatte\Renderer\Renderer.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ForLatte\Application.cpp">
@@ -91,12 +115,27 @@
     <ClCompile Include="src\ForLatte\Log.cpp">
       <Filter>ForLatte</Filter>
     </ClCompile>
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\ForLatte\Platform\Windows\WindowsInput.cpp">
       <Filter>ForLatte\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\Platform\Windows\WindowsWindow.cpp">
       <Filter>ForLatte\Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\Buffer.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\Shader.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\flpch.cpp" />
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\Renderer.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

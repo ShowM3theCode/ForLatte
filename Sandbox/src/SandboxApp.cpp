@@ -9,7 +9,6 @@ public:
 	}
 
 	void OnUpdate() override {
-		if (ForLatte::Input::IsKeyPressed(FL_KEY_TAB)) FL_TRACE("Tab key is pressed!");
 	}
 
 	void OnEvent(ForLatte::Event& event) override {

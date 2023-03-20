@@ -4,6 +4,8 @@
 
 #include <GLFW/glfw3.h>
 
+#include "ForLatte/Renderer/GraphicsContext.h"
+
 namespace ForLatte {
 
 	class WindowsWindow : public Window {
@@ -28,6 +30,7 @@ namespace ForLatte {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData {
 			std::string Title;
