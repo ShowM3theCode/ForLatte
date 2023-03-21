@@ -10,20 +10,20 @@ namespace ForLatte {
 	{
 		switch (Renderer::GetAPI())
 		{
-			case RendererAPI::None: FL_CORE_ERROR("None is currently not supported!"); return nullptr;
+			case RendererAPI::None: FL_CORE_ASSERT(false, "None is currently not supported!"); return nullptr;
 			case RendererAPI::OpenGL: return new OpenGLVertexBuffer(vertices, size);
 		}
-		FL_CORE_ERROR("Unknown Renderer API!");
+		FL_CORE_ASSERT(false, "Unknown Renderer API!");
 		return nullptr;
 	}
 	IndexBuffer* IndexBuffer::Create(uint32_t* indices, uint32_t count)
 	{
 		switch (Renderer::GetAPI())
 		{
-			case RendererAPI::None: FL_CORE_ERROR("None is currently not supported!"); return nullptr;
+			case RendererAPI::None: FL_CORE_ASSERT(false, "None is currently not supported!"); return nullptr;
 			case RendererAPI::OpenGL: return new OpenGLIndexBuffer(indices, count);
 		}
-		FL_CORE_ERROR("Unknown Renderer API!");
+		FL_CORE_ASSERT(false, "Unknown Renderer API!");
 		return nullptr;
 	}
 }

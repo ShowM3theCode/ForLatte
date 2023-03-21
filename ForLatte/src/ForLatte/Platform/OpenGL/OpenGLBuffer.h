@@ -13,7 +13,7 @@ namespace ForLatte {
 		virtual void Unbind() const override;
 
 		virtual const BufferLayout& GetLayout() const override { return m_Layout; }
-		virtual void SetLayout(BufferLayout& layout) override { m_Layout = layout; }
+		virtual void SetLayout(BufferLayout layout) override { m_Layout = layout; }
 
 		
 

@@ -73,6 +73,9 @@
     <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLContext.h">
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLVertexArray.h">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\ForLatte\Platform\Windows\WindowsInput.h">
       <Filter>ForLatte\Platform\Windows</Filter>
     </ClInclude>
@@ -85,16 +88,19 @@
     <ClInclude Include="src\ForLatte\Renderer\GraphicsContext.h">
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\Renderer\Renderer.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\ForLatte\Renderer\Shader.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Renderer\VertexArray.h">
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Window.h">
       <Filter>ForLatte</Filter>
     </ClInclude>
     <ClInclude Include="src\flpch.h" />
-    <ClInclude Include="src\ForLatte\Renderer\Renderer.h">
-      <Filter>ForLatte\Renderer</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ForLatte\Application.cpp">
@@ -115,7 +121,13 @@
     <ClCompile Include="src\ForLatte\Log.cpp">
       <Filter>ForLatte</Filter>
     </ClCompile>
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\Platform\Windows\WindowsInput.cpp">
@@ -127,15 +139,15 @@
     <ClCompile Include="src\ForLatte\Renderer\Buffer.cpp">
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
-    <ClCompile Include="src\ForLatte\Renderer\Shader.cpp">
-      <Filter>ForLatte\Renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\flpch.cpp" />
-    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLBuffer.cpp">
-      <Filter>ForLatte\Platform\OpenGL</Filter>
-    </ClCompile>
     <ClCompile Include="src\ForLatte\Renderer\Renderer.cpp">
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\Shader.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\VertexArray.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\flpch.cpp" />
   </ItemGroup>
 </Project>
