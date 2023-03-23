@@ -6,6 +6,8 @@
 #include "ForLatte/Log.h"
 #include "ForLatte/Layer.h"
 
+#include "ForLatte/Core/Timestep.h"
+
 #include "ForLatte/Input.h"
 #include "ForLatte/KeyCodes.h"
 #include "ForLatte/MouseButtonCodes.h"

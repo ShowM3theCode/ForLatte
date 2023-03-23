@@ -4,6 +4,9 @@
     <Filter Include="ForLatte">
       <UniqueIdentifier>{C662B685-B22F-1191-DB48-FF38C774461F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ForLatte\Core">
+      <UniqueIdentifier>{DE325AF2-4AF3-D528-132E-1FA67FAD1A05}</UniqueIdentifier>
+    </Filter>
     <Filter Include="ForLatte\Events">
       <UniqueIdentifier>{EA73D4F6-56FF-41BB-5F10-C5AFCB1A9EBB}</UniqueIdentifier>
     </Filter>
@@ -30,6 +33,9 @@
     </ClInclude>
     <ClInclude Include="src\ForLatte\Core.h">
       <Filter>ForLatte</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Core\Timestep.h">
+      <Filter>ForLatte\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\EntryPoint.h">
       <Filter>ForLatte</Filter>
@@ -73,6 +79,9 @@
     <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLContext.h">
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLRendererAPI.h">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLVertexArray.h">
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClInclude>
@@ -88,7 +97,16 @@
     <ClInclude Include="src\ForLatte\Renderer\GraphicsContext.h">
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\Renderer\OrthoGraphicCamera.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Renderer\RenderCommand.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\ForLatte\Renderer\Renderer.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Renderer\RendererAPI.h">
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Renderer\Shader.h">
@@ -101,18 +119,6 @@
       <Filter>ForLatte</Filter>
     </ClInclude>
     <ClInclude Include="src\flpch.h" />
-    <ClInclude Include="src\ForLatte\Renderer\RendererAPI.h">
-      <Filter>ForLatte\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ForLatte\Renderer\RenderCommand.h">
-      <Filter>ForLatte\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLRendererAPI.h">
-      <Filter>ForLatte\Platform\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ForLatte\Renderer\OrthoGraphicCamera.h">
-      <Filter>ForLatte\Renderer</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ForLatte\Application.cpp">
@@ -139,6 +145,9 @@
     <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLContext.cpp">
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClCompile>
@@ -151,7 +160,16 @@
     <ClCompile Include="src\ForLatte\Renderer\Buffer.cpp">
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\OrthoGraphicCamera.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\RenderCommand.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\ForLatte\Renderer\Renderer.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\RendererAPI.cpp">
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\Renderer\Shader.cpp">
@@ -161,17 +179,5 @@
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\flpch.cpp" />
-    <ClCompile Include="src\ForLatte\Renderer\RendererAPI.cpp">
-      <Filter>ForLatte\Renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ForLatte\Renderer\RenderCommand.cpp">
-      <Filter>ForLatte\Renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLRendererAPI.cpp">
-      <Filter>ForLatte\Platform\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ForLatte\Renderer\OrthoGraphicCamera.cpp">
-      <Filter>ForLatte\Renderer</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

@@ -119,22 +119,22 @@ public:
 		m_BlueShader.reset(new ForLatte::Shader(blueShaderVertexSrc, blueShaderFragmentSrc));
 	}
 
-	void OnUpdate() override
+	void OnUpdate(ForLatte::Timestep ts) override
 	{
 		if (ForLatte::Input::IsKeyPressed(FL_KEY_LEFT))
-			m_CameraPosition.x -= m_CameraMoveSpeed;
+			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
 		else if (ForLatte::Input::IsKeyPressed(FL_KEY_RIGHT))
-			m_CameraPosition.x += m_CameraMoveSpeed;
+			m_CameraPosition.x += m_CameraMoveSpeed * ts;
 
 		if (ForLatte::Input::IsKeyPressed(FL_KEY_DOWN))
-			m_CameraPosition.y -= m_CameraMoveSpeed;
+			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
 		else if (ForLatte::Input::IsKeyPressed(FL_KEY_UP))
-			m_CameraPosition.y += m_CameraMoveSpeed;
+			m_CameraPosition.y += m_CameraMoveSpeed * ts;
 
 		if (ForLatte::Input::IsKeyPressed(FL_KEY_A))
-			m_CameraRotation += m_CameraRotationSpeed;
+			m_CameraRotation += m_CameraRotationSpeed * ts;
 		else if (ForLatte::Input::IsKeyPressed(FL_KEY_D))
-			m_CameraRotation -= m_CameraRotationSpeed;
+			m_CameraRotation -= m_CameraRotationSpeed * ts;
 
 		ForLatte::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		ForLatte::RenderCommand::Clear();
@@ -169,10 +169,10 @@ private:
 
 	ForLatte::OrthoGraphicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
-	float m_CameraMoveSpeed = 0.1f;
+	float m_CameraMoveSpeed = 3.0f;
 
 	float m_CameraRotation = 0.0f;
-	float m_CameraRotationSpeed = 1.0f;
+	float m_CameraRotationSpeed = 180.0f;
 };
 
 class Sandbox : public ForLatte::Application {

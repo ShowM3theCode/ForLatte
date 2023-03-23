@@ -138,6 +138,7 @@
     <ClInclude Include="src\ForLatte.h" />
     <ClInclude Include="src\ForLatte\Application.h" />
     <ClInclude Include="src\ForLatte\Core.h" />
+    <ClInclude Include="src\ForLatte\Core\Timestep.h" />
     <ClInclude Include="src\ForLatte\EntryPoint.h" />
     <ClInclude Include="src\ForLatte\Events\ApplicationEvent.h" />
     <ClInclude Include="src\ForLatte\Events\Event.h" />
@@ -159,9 +160,9 @@
     <ClInclude Include="src\ForLatte\Renderer\Buffer.h" />
     <ClInclude Include="src\ForLatte\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\ForLatte\Renderer\OrthoGraphicCamera.h" />
+    <ClInclude Include="src\ForLatte\Renderer\RenderCommand.h" />
     <ClInclude Include="src\ForLatte\Renderer\Renderer.h" />
     <ClInclude Include="src\ForLatte\Renderer\RendererAPI.h" />
-    <ClInclude Include="src\ForLatte\Renderer\RenderCommand.h" />
     <ClInclude Include="src\ForLatte\Renderer\Shader.h" />
     <ClInclude Include="src\ForLatte\Renderer\VertexArray.h" />
     <ClInclude Include="src\ForLatte\Window.h" />
