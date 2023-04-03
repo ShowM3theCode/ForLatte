@@ -2,7 +2,7 @@
 
 #include "flpch.h"
 
-#include "ForLatte/Core.h"
+#include "ForLatte/Core/Core.h"
 #include "ForLatte/Events/Event.h"
 
 namespace ForLatte {

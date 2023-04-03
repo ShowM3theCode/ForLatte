@@ -8,7 +8,7 @@
 #include "GLFW/glfw3.h"
 #include "glad/glad.h"
 
-#include "ForLatte/Application.h"
+#include "ForLatte/Core/Application.h"
 
 namespace ForLatte {
 	ImGuiLayer::ImGuiLayer() : Layer("ImGuiLayer") {

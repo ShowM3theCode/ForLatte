@@ -2,7 +2,7 @@
 #include "WindowsInput.h"
 
 #include <GLFW/glfw3.h>
-#include "ForLatte/Application.h"
+#include "ForLatte/Core/Application.h"
 
 namespace ForLatte {
 

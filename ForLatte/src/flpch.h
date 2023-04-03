@@ -6,12 +6,13 @@
 #include <functional>
 #include <sstream>
 
+#include <array>
 #include <string>
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
 
-#include "ForLatte/Log.h"
+#include "ForLatte/Core/Log.h"
 
 #ifdef FL_PLATFORM_WINDOWS
 	#include <Windows.h>

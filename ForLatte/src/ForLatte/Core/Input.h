@@ -1,9 +1,9 @@
 #pragma once
 
-#include "ForLatte/Core.h"
+#include "ForLatte/Core/Core.h"
 
 namespace ForLatte {
-	class ForLatte_API Input {
+	class Input {
 	public:
 		inline static bool IsKeyPressed(int keycode) { return s_Instance->IsKeyPressedImpl(keycode); }
 		inline static bool IsMouseButtonPressed(int button) { return s_Instance->IsMouseButtonPressedImpl(button); }

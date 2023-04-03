@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ForLatte/Window.h"
+#include "ForLatte/Core/Window.h"
 
 #include <GLFW/glfw3.h>
 

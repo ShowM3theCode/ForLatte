@@ -16,6 +16,7 @@ IncludeDir["GLFW"] = "ForLatte/vender/GLFW/include"
 IncludeDir["Glad"] = "ForLatte/vender/Glad/include"
 IncludeDir["ImGui"] = "ForLatte/vender/imgui"
 IncludeDir["glm"] = "ForLatte/vender/glm"
+IncludeDir["stb_image"] = "ForLatte/vender/stb_image"
 
 include "ForLatte/vender/GLFW"
 include "ForLatte/vender/Glad"
@@ -37,6 +38,8 @@ project "ForLatte"
 	files {
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"{prj.name}/vender/stb_image/**.h",
+		"{prj.name}/vender/stb_image/**.cpp",
 		"{prj.name}/vender/glm/glm/**.hpp",
 		"{prj.name}/vender/glm/glm/**.inl"
 	}
@@ -47,7 +50,8 @@ project "ForLatte"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links {

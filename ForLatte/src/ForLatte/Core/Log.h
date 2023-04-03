@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ForLatte/Core.h"
+#include "ForLatte/Core/Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 

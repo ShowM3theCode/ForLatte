@@ -28,17 +28,38 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ForLatte.h" />
-    <ClInclude Include="src\ForLatte\Application.h">
-      <Filter>ForLatte</Filter>
+    <ClInclude Include="src\ForLatte\Core\Application.h">
+      <Filter>ForLatte\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\ForLatte\Core.h">
-      <Filter>ForLatte</Filter>
+    <ClInclude Include="src\ForLatte\Core\Core.h">
+      <Filter>ForLatte\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Core\EntryPoint.h">
+      <Filter>ForLatte\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Core\Input.h">
+      <Filter>ForLatte\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Core\KeyCodes.h">
+      <Filter>ForLatte\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Core\Layer.h">
+      <Filter>ForLatte\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Core\LayerStack.h">
+      <Filter>ForLatte\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Core\Log.h">
+      <Filter>ForLatte\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Core\MouseButtonCodes.h">
+      <Filter>ForLatte\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Core\Timestep.h">
       <Filter>ForLatte\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\ForLatte\EntryPoint.h">
-      <Filter>ForLatte</Filter>
+    <ClInclude Include="src\ForLatte\Core\Window.h">
+      <Filter>ForLatte\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Events\ApplicationEvent.h">
       <Filter>ForLatte\Events</Filter>
@@ -55,24 +76,6 @@
     <ClInclude Include="src\ForLatte\ImGui\ImGuiLayer.h">
       <Filter>ForLatte\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\ForLatte\Input.h">
-      <Filter>ForLatte</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ForLatte\KeyCodes.h">
-      <Filter>ForLatte</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ForLatte\Layer.h">
-      <Filter>ForLatte</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ForLatte\LayerStack.h">
-      <Filter>ForLatte</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ForLatte\Log.h">
-      <Filter>ForLatte</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ForLatte\MouseButtonCodes.h">
-      <Filter>ForLatte</Filter>
-    </ClInclude>
     <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClInclude>
@@ -80,6 +83,12 @@
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLRendererAPI.h">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLShader.h">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLTexture.h">
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Platform\OpenGL\OpenGLVertexArray.h">
@@ -97,7 +106,10 @@
     <ClInclude Include="src\ForLatte\Renderer\GraphicsContext.h">
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="src\ForLatte\Renderer\OrthoGraphicCamera.h">
+    <ClInclude Include="src\ForLatte\Renderer\OrthographicCamera.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Renderer\OrthographicCameraController.h">
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Renderer\RenderCommand.h">
@@ -112,32 +124,32 @@
     <ClInclude Include="src\ForLatte\Renderer\Shader.h">
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="src\ForLatte\Renderer\VertexArray.h">
+    <ClInclude Include="src\ForLatte\Renderer\Texture.h">
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="src\ForLatte\Window.h">
-      <Filter>ForLatte</Filter>
+    <ClInclude Include="src\ForLatte\Renderer\VertexArray.h">
+      <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\flpch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ForLatte\Application.cpp">
-      <Filter>ForLatte</Filter>
+    <ClCompile Include="src\ForLatte\Core\Application.cpp">
+      <Filter>ForLatte\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Core\Layer.cpp">
+      <Filter>ForLatte\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Core\LayerStack.cpp">
+      <Filter>ForLatte\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Core\Log.cpp">
+      <Filter>ForLatte\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\ImGui\ImGuiBuild.cpp">
       <Filter>ForLatte\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\ImGui\ImGuiLayer.cpp">
       <Filter>ForLatte\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ForLatte\Layer.cpp">
-      <Filter>ForLatte</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ForLatte\LayerStack.cpp">
-      <Filter>ForLatte</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ForLatte\Log.cpp">
-      <Filter>ForLatte</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLBuffer.cpp">
       <Filter>ForLatte\Platform\OpenGL</Filter>
@@ -146,6 +158,12 @@
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLShader.cpp">
+      <Filter>ForLatte\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLTexture.cpp">
       <Filter>ForLatte\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\Platform\OpenGL\OpenGLVertexArray.cpp">
@@ -160,7 +178,10 @@
     <ClCompile Include="src\ForLatte\Renderer\Buffer.cpp">
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
-    <ClCompile Include="src\ForLatte\Renderer\OrthoGraphicCamera.cpp">
+    <ClCompile Include="src\ForLatte\Renderer\OrthographicCamera.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\OrthographicCameraController.cpp">
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\Renderer\RenderCommand.cpp">
@@ -173,6 +194,9 @@
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\Renderer\Shader.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\Texture.cpp">
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\ForLatte\Renderer\VertexArray.cpp">

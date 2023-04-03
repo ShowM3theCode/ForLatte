@@ -1,5 +1,5 @@
 #pragma once
-#include "ForLatte/Input.h"
+#include "ForLatte/Core/Input.h"
 
 namespace ForLatte {
 	class WindowsInput : public Input {

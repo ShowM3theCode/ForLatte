@@ -2,15 +2,15 @@
 
 #include <stdio.h>
 // For use by ForLatte applications
-#include "ForLatte/Application.h"
-#include "ForLatte/Log.h"
-#include "ForLatte/Layer.h"
+#include "ForLatte/Core/Application.h"
+#include "ForLatte/Core/Log.h"
+#include "ForLatte/Core/Layer.h"
 
 #include "ForLatte/Core/Timestep.h"
 
-#include "ForLatte/Input.h"
-#include "ForLatte/KeyCodes.h"
-#include "ForLatte/MouseButtonCodes.h"
+#include "ForLatte/Core/Input.h"
+#include "ForLatte/Core/KeyCodes.h"
+#include "ForLatte/Core/MouseButtonCodes.h"
 
 #include "ForLatte/ImGui/ImGuiLayer.h"
 
@@ -20,12 +20,14 @@
 
 #include "ForLatte/Renderer/Buffer.h"
 #include "ForLatte/Renderer/Shader.h"
+#include "ForLatte/Renderer/Texture.h"
 #include "ForLatte/Renderer/VertexArray.h"
 
-#include "ForLatte/Renderer/OrthoGraphicCamera.h"
+#include "ForLatte/Renderer/OrthographicCamera.h"
+#include "ForLatte/Renderer/OrthographicCameraController.h"
 // --------------------------------------
 
 
 // ------------Entry Point---------------
-#include "ForLatte/EntryPoint.h"
+#include "ForLatte/Core/EntryPoint.h"
 // --------------------------------------

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "ForLatte/Core.h"
+#include "ForLatte/Core/Core.h"
 #include "ForLatte/Events/Event.h"
 
-#include "Core/Timestep.h"
+#include "ForLatte/Core/Timestep.h"
 
 namespace ForLatte {
 

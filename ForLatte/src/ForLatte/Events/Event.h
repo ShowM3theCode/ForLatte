@@ -1,7 +1,7 @@
 #pragma once
 
 #include "flpch.h"
-#include "ForLatte/Core.h"
+#include "ForLatte/Core/Core.h"
 
 namespace ForLatte {
 
