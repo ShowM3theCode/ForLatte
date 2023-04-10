@@ -16,6 +16,7 @@
 
 // ------------Renderer------------------
 #include "ForLatte/Renderer/Renderer.h"
+#include "ForLatte/Renderer/Renderer2D.h"
 #include "ForLatte/Renderer/RenderCommand.h"
 
 #include "ForLatte/Renderer/Buffer.h"
@@ -28,6 +29,3 @@
 // --------------------------------------
 
 
-// ------------Entry Point---------------
-#include "ForLatte/Core/EntryPoint.h"
-// --------------------------------------

@@ -17,6 +17,8 @@ namespace ForLatte {
 
 	Application::Application()
 	{
+		FL_PROFILE_FUNCTION();
+
 		FL_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 
@@ -35,12 +37,14 @@ namespace ForLatte {
 
 	void Application::PushLayer(Layer* layer)
 	{
+		FL_PROFILE_FUNCTION();
 		m_LayerStack.PushLayer(layer);
 		layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* layer)
 	{
+		FL_PROFILE_FUNCTION();
 		m_LayerStack.PushOverlay(layer);
 		layer->OnAttach();
 	}
@@ -61,6 +65,7 @@ namespace ForLatte {
 
 	void Application::Run()
 	{
+		FL_PROFILE_FUNCTION();
 		while (m_Running)
 		{
 			float time = (float)glfwGetTime();
@@ -69,14 +74,19 @@ namespace ForLatte {
 
 			if (!m_Minimized)
 			{
-				for (Layer* layer : m_LayerStack)
-					layer->OnUpdate(timestep);
+				{
+					FL_PROFILE_SCOPE("LayerStack OnUpdate");
+					for (Layer* layer : m_LayerStack)
+						layer->OnUpdate(timestep);
+				}
+				m_ImGuiLayer->Begin();
+				{
+					FL_PROFILE_SCOPE("LayerStack OnImGuiRender");
+					for (Layer* layer : m_LayerStack)
+						layer->OnImGuiRender();
+				}
+				m_ImGuiLayer->End();
 			}
-
-			m_ImGuiLayer->Begin();
-			for (Layer* layer : m_LayerStack)
-				layer->OnImGuiRender();
-			m_ImGuiLayer->End();
 
 			m_Window->OnUpdate();
 		}

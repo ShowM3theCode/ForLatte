@@ -131,6 +131,8 @@
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\flpch.h" />
+    <ClInclude Include="src\ForLatte\Renderer\Renderer2D.h" />
+    <ClInclude Include="src\ForLatte\Debug\Instrumentor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ForLatte\Core\Application.cpp">
@@ -203,5 +205,6 @@
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\flpch.cpp" />
+    <ClCompile Include="src\ForLatte\Renderer\Renderer2D.cpp" />
   </ItemGroup>
 </Project>

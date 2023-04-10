@@ -12,7 +12,9 @@ namespace ForLatte {
 		FL_CORE_ASSERT(windowHandle, "Window handle is null!");
 	}
 
-	void OpenGLContext::Init() {
+	void OpenGLContext::Init()
+	{
+		FL_PROFILE_FUNCTION();
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		FL_CORE_ASSERT(status, "Failed to initialize GLFW!");
@@ -21,7 +23,9 @@ namespace ForLatte {
 		FL_CORE_INFO("Version : {0}", (char*)glGetString(GL_VERSION));
 	}
 
-	void OpenGLContext::SwapBuffers() {
+	void OpenGLContext::SwapBuffers()
+	{
+		FL_PROFILE_FUNCTION();
 		glfwSwapBuffers(m_WindowHandle);
 	}
 }

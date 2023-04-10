@@ -12,6 +12,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "ForLatte/Debug/Instrumentor.h"
 #include "ForLatte/Core/Log.h"
 
 #ifdef FL_PLATFORM_WINDOWS
