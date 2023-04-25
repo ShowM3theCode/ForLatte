@@ -10,6 +10,8 @@
 
 #include "Sandbox2D.h"
 
+#include "GameLayer.h"
+
 
 class ExampleLayer : public ForLatte::Layer {
 public:
@@ -24,8 +26,8 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<ForLatte::VertexBuffer> vertexBuffer;
-		vertexBuffer.reset(ForLatte::VertexBuffer::Create(vertices, sizeof(vertices)));
+		ForLatte::Ref<ForLatte::VertexBuffer> vertexBuffer;
+		vertexBuffer = ForLatte::VertexBuffer::Create(vertices, sizeof(vertices));
 		ForLatte::BufferLayout layout = {
 			{ ForLatte::ShaderDataType::Float3, "a_Position" },
 			{ ForLatte::ShaderDataType::Float4, "a_Color" }
@@ -34,8 +36,8 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<ForLatte::IndexBuffer> indexBuffer;
-		indexBuffer.reset(ForLatte::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+		ForLatte::Ref<ForLatte::IndexBuffer> indexBuffer;
+		indexBuffer = ForLatte::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
 		m_SquareVA = ForLatte::VertexArray::Create();
@@ -47,8 +49,8 @@ public:
 			-0.5f,  0.5f, 0.0f, 0.0f, 1.0f
 		};
 
-		std::shared_ptr<ForLatte::VertexBuffer> squareVB;
-		squareVB.reset(ForLatte::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+		ForLatte::Ref<ForLatte::VertexBuffer> squareVB;
+		squareVB = ForLatte::VertexBuffer::Create(squareVertices, sizeof(squareVertices));
 		squareVB->SetLayout({
 			{ ForLatte::ShaderDataType::Float3, "a_Position" },
 			{ ForLatte::ShaderDataType::Float2, "a_TexCoord" }
@@ -56,8 +58,8 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<ForLatte::IndexBuffer> squareIB;
-		squareIB.reset(ForLatte::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		ForLatte::Ref<ForLatte::IndexBuffer> squareIB;
+		squareIB = ForLatte::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
 		std::string vertexSrc = R"(
@@ -165,7 +167,7 @@ public:
 			}
 		)";
 
-		auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
+		auto textureShader = m_ShaderLibrary.Load("assets/shaders/GameTexture.glsl");
 
 		m_Texture = ForLatte::Texture2D::Create("assets/textures/checkerboard.png");
 		m_ChernoLogoTexture = ForLatte::Texture2D::Create("assets/textures/ChernoLogo.png");
@@ -253,6 +255,7 @@ public:
 	{
 		// PushLayer(new ExampleLayer());
 		PushLayer(new Sandbox2D());
+		// PushLayer(new GameLayer());
 	}
 
 	~Sandbox()

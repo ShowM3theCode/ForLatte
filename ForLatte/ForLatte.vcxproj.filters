@@ -7,6 +7,9 @@
     <Filter Include="ForLatte\Core">
       <UniqueIdentifier>{DE325AF2-4AF3-D528-132E-1FA67FAD1A05}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ForLatte\Debug">
+      <UniqueIdentifier>{BCE9AC3D-A8B7-A043-914B-116A7DB87CA8}</UniqueIdentifier>
+    </Filter>
     <Filter Include="ForLatte\Events">
       <UniqueIdentifier>{EA73D4F6-56FF-41BB-5F10-C5AFCB1A9EBB}</UniqueIdentifier>
     </Filter>
@@ -60,6 +63,9 @@
     </ClInclude>
     <ClInclude Include="src\ForLatte\Core\Window.h">
       <Filter>ForLatte\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ForLatte\Debug\Instrumentor.h">
+      <Filter>ForLatte\Debug</Filter>
     </ClInclude>
     <ClInclude Include="src\ForLatte\Events\ApplicationEvent.h">
       <Filter>ForLatte\Events</Filter>
@@ -118,6 +124,9 @@
     <ClInclude Include="src\ForLatte\Renderer\Renderer.h">
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForLatte\Renderer\Renderer2D.h">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\ForLatte\Renderer\RendererAPI.h">
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
@@ -131,8 +140,6 @@
       <Filter>ForLatte\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\flpch.h" />
-    <ClInclude Include="src\ForLatte\Renderer\Renderer2D.h" />
-    <ClInclude Include="src\ForLatte\Debug\Instrumentor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ForLatte\Core\Application.cpp">
@@ -192,6 +199,9 @@
     <ClCompile Include="src\ForLatte\Renderer\Renderer.cpp">
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\ForLatte\Renderer\Renderer2D.cpp">
+      <Filter>ForLatte\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\ForLatte\Renderer\RendererAPI.cpp">
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
@@ -205,6 +215,5 @@
       <Filter>ForLatte\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\flpch.cpp" />
-    <ClCompile Include="src\ForLatte\Renderer\Renderer2D.cpp" />
   </ItemGroup>
 </Project>

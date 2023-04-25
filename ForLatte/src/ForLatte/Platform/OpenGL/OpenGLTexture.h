@@ -21,6 +21,8 @@ namespace ForLatte {
 
 		virtual void Bind(uint32_t slot = 0) const override;
 
+		virtual bool operator==(const Texture2D& other) const override;
+
 	private:
 		std::string m_Path;
 		uint32_t m_RendererID, m_Width, m_Height;

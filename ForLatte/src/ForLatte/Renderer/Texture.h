@@ -22,5 +22,7 @@ namespace ForLatte {
 	public:
 		static Ref<Texture2D> Create(const std::string& path);
 		static Ref<Texture2D> Create(int width, int height);
+
+		virtual bool operator==(const Texture2D& other) const = 0;
 	};
 }
